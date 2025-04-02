@@ -7,9 +7,8 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true, // Включаем nodeIntegration
-      nodeIntegrationInWorker: true, // Разрешаем использование require в WebWorkers
-      contextIsolation: false, // Отключаем isolation для использования require
+      nodeIntegration: true,
+      contextIsolation: false, 
     }
   });
 
@@ -22,5 +21,5 @@ app.whenReady().then(() => {
 });
 
 ipcMain.on('close-win', () => {
-  if (win) win.close();
+  win.close();
 });
