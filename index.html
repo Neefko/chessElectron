@@ -15,11 +15,22 @@
 </head>
 <body>
   <div id="board"></div>
+  
   <script type="module">
     import { Chessground } from './node_modules/chessground/dist/chessground.min.js';
-  
+
     const boardElement = document.getElementById('board');
     const ground = Chessground(boardElement, {});
+  </script>
+
+  <button id="closer">Закрыть</button>
+
+  <script>
+    const { ipcRenderer } = require('electron'); // Используем require в рендер-процессе с nodeIntegration
+
+    document.getElementById('closer').addEventListener('click', () => {
+      ipcRenderer.send('close-window');
+    });
   </script>
 </body>
 </html>
