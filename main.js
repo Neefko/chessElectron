@@ -21,6 +21,6 @@ app.whenReady().then(() => {
   createWindow();
 });
 
-ipcMain.on('close-window', () => {
+ipcMain.on('close-win', () => {
   if (win) win.close();
 });

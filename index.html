@@ -23,13 +23,11 @@
     const ground = Chessground(boardElement, {});
   </script>
 
-  <button id="closer">Закрыть</button>
-
+  <button id="close">Закрыть</button>
   <script>
     const { ipcRenderer } = require('electron'); // Используем require в рендер-процессе с nodeIntegration
-
-    document.getElementById('closer').addEventListener('click', () => {
-      ipcRenderer.send('close-window');
+    document.getElementById('close').addEventListener('click', () => {
+      ipcRenderer.send('close-win');
     });
   </script>
 </body>
