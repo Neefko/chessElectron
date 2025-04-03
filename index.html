@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Шахматы</title>
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="node_modules/chessground/assets/chessground.base.css">
-  <link rel="stylesheet" href="node_modules/chessground/assets/chessground.brown.css">
+  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.base.css">
+  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.brown.css">
+  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.cburnett.css">
   <style>
     #board {
       width: 600px;
@@ -14,11 +15,21 @@
     }
   </style>
 </head>
+
+<header>
+  <h1>Chess</h1>
+</header>
 <body>
-  <div id="board"></div>
+  <div class="chessground"id="board"></div>
   <script type="module">
     import {Chessground} from './node_modules/chessground/dist/chessground.min.js';
-    const config = {};
+
+    const config = {
+      turnColor: 'white', // Белые начинают первыми
+      drawable: {
+        enabled: false, // Включаем возможность рисования стрелок и кругов
+      }
+    };
     const ground = Chessground(document.getElementById('board'), config);
   </script>
 
