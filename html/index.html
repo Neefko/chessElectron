@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Шахматы</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.base.css">
-  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.brown.css">
-  <link rel="stylesheet" href="./node_modules/chessground/assets/chessground.cburnett.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../node_modules/chessground/assets/chessground.base.css">
+  <link rel="stylesheet" href="../node_modules/chessground/assets/chessground.brown.css">
+  <link rel="stylesheet" href="../node_modules/chessground/assets/chessground.cburnett.css">
   <style>
     #board {
       width: 600px;
@@ -22,7 +22,7 @@
 <body>
   <div class="chessground"id="board"></div>
   <script type="module">
-    import {Chessground} from './node_modules/chessground/dist/chessground.min.js';
+    import {Chessground} from '../node_modules/chessground/dist/chessground.min.js';
 
     const config = {
       turnColor: 'white', // Белые начинают первыми
