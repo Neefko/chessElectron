@@ -13,7 +13,7 @@ const createWindow = () => {
   });
 
   win.loadFile('./html/main.html');
-  win.webContents.openDevTools(); // Убрать потом
+  // win.webContents.openDevTools(); // Убрать потом
 };
 
 app.whenReady().then(() => {
